@@ -1,92 +1,94 @@
 # Setup SDL_bgi pentru Xcode versiunea 13.4.1 sau mai noua
 # I) -> Metoda pentru laptop-urile Macbook cu procesor intel, MacOS Ventura sau mai noua:
 
-1) Instalare Homebrew (url : https://brew.sh)
+# 1) Instalare Homebrew (url : https://brew.sh)
 	-> copiati comanda din casuta de sub ```Install Homebrew```
 	-> introduceti comanda intr-o fereastra de terminal
 	-> La un moment dat, o sa vi se ceara parola de la computer; Introduceti parola in prompt
 	-> Asteptati pana la finalizarea instalarii
 
-2) Instalare SDL2
-#	-> scrieti in terminal ``brew install sdl2``
+# 2) Instalare SDL2
+	-> scrieti in terminal ``brew install sdl2``
 	-> Aceasta "comanda" se va instala in folder-ul /usr/local/Cellar/
 
 3) Instalare libraria SDL_bgi (url : https://sdl-bgi.sourceforge.io/#download)
 	-> descarcati ultima versiune a aceste librarii (in momentul actual, 3.0.0), cu extensia .tar.gz
 	-> Mergeti in folder-ul unde ati descarcat fisierul-suport (de regula, recomand in folder-ul Descarcari/Downloads sa-l puneti), dezarhivati zip-ul cu "Archive Utility.app" (aplicatie preinstalata in mac)
-	-> Deschideti terminalul si tastati urmatoarele comenzi
-#	-> $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
-#	-> $ make
-#	-> $ mv SDL_bgi.h /usr/local/Cellar/sdl2/
-#	-> $ mv graphics.h /usr/local/include
-#	-> $ mv libSDL_bgi.so /usr/local/lib
-
-4) Adjustarea Xcode-ului pentru a putea rula libraria SDL_bgi:
+	-> Deschideti terminalul si tastati urmatoarele comenzi:
+```
+	 $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
+	 $ make
+	 $ mv SDL_bgi.h /usr/local/Cellar/sdl2/
+	 $ mv graphics.h /usr/local/include
+	 $ mv libSDL_bgi.so /usr/local/lib
+```
+# 4) Adjustarea Xcode-ului pentru a putea rula libraria SDL_bgi:
 	-> Deschideti Xcode si selectati "Create New Project"
 	-> Alegeti "Comand Line Tool"
 	-> denumiti sugestiv proiectul
 	-> (in bara de sus unde apare numele aplicatiei, langa logo-ul Apple-ului):
-	# Selectati Product -> Scheme -> "Edit Scheme"
-	# Selectati Run -> Diagnostics; Deselectati Metal API Validation
-	# Selectati tot la Run, "Options" -> "Use costum working directory: "; Aici navigati la folder-ul unde gasiti "main.cpp"; Apoi dati "close" la scheme
-	# In tabul din stanga, unde se regaseste "main.cpp", selectati (nume_proiect_cum_l-ati_denumit_voi).xcodeproj (este cel mai de sus din acel tab)
-	# Selectati din Targets, textul care are in stanga sa o iconita cu un terminal
-	# Build Phases -> "Link Binary with Libraries"; Apasati pe butonul de add "+" : "Add Other" -> "Add files..."
-	# Apasati comanda "Command + Shift + G" si introduceti "/usr/local/Cellar/sdl2/2.28.5/lib"
-	# Selectati urmatorul executabil : libSDL2-2.0.0.dylib
-	# In aceeasi maniera, adaugati si "libSDL_bgi.so" in "Link Binary with Libraries"; Acesta se gasesti in "/usr/local/lib" (adresa pe care o introduceti dupa ce tastati comanda "Command + Shift + G")
-	# Mergeti la "General", sub "Frameworks and Libraries", selectati ambele executabile sa fie "Embed & Sign"
-	# Build Settings -> Architectures -> "Build Active Architecture Only" -> release; Selectati "Yes"
-	# Build Settings -> "Search Path" -> "Header Search Paths"; Inserati: ``/usr/local/include`` 
-	# 								  -> "Library Search Paths"; Inserati: ``/usr/local/Cellar/sdl2/2.28.5/lib`` 
-	#																						(Ambele fara ghilimele)
+	 Selectati Product -> Scheme -> "Edit Scheme"
+	 Selectati Run -> Diagnostics; Deselectati Metal API Validation
+	 Selectati tot la Run, "Options" -> "Use costum working directory: "; Aici navigati la folder-ul unde gasiti "main.cpp"; Apoi dati "close" la scheme
+	 In tabul din stanga, unde se regaseste "main.cpp", selectati (nume_proiect_cum_l-ati_denumit_voi).xcodeproj (este cel mai de sus din acel tab)
+	 Selectati din Targets, textul care are in stanga sa o iconita cu un terminal
+	 Build Phases -> "Link Binary with Libraries"; Apasati pe butonul de add "+" : "Add Other" -> "Add files..."
+	 Apasati comanda "Command + Shift + G" si introduceti "/usr/local/Cellar/sdl2/2.28.5/lib"
+	 Selectati urmatorul executabil : libSDL2-2.0.0.dylib
+	 In aceeasi maniera, adaugati si "libSDL_bgi.so" in "Link Binary with Libraries"; Acesta se gasesti in "/usr/local/lib" (adresa pe care o introduceti dupa ce tastati comanda "Command + Shift + G")
+	 Mergeti la "General", sub "Frameworks and Libraries", selectati ambele executabile sa fie "Embed & Sign"
+	 Build Settings -> Architectures -> "Build Active Architecture Only" -> release; Selectati "Yes"
+	 Build Settings -> "Search Path" -> "Header Search Paths"; Inserati: ``/usr/local/include`` 
+	 								  -> "Library Search Paths"; Inserati: ``/usr/local/Cellar/sdl2/2.28.5/lib`` 
+																							(Ambele fara ghilimele)
 
 # II) Metoda pentru laptop-urile Macbook cu procesor de tip arm (M1, M2), MacOS Ventura sau mai noua:
 
-1) Instalare Homebrew (url : https://brew.sh)
+# 1) Instalare Homebrew (url : https://brew.sh)
 	-> copiati comanda din casuta de sub ```Install Homebrew```
 	-> introduceti comanda intr-o fereastra de terminal
 	-> La un moment dat, o sa vi se ceara parola de la computer; Introduceti parola in prompt
 	-> Asteptati pana la finalizarea instalarii
 
-2) Instalare SDL2
-#	-> scrieti in terminal ``brew install sdl2``
+# 2) Instalare SDL2
+	-> scrieti in terminal ``brew install sdl2``
 	-> Aceasta "comanda" se va instala in folder-ul /opt/homebrew/Cellar
 
-3) Instalare libraria SDL_bgi (url : https://sdl-bgi.sourceforge.io/#download)
+# 3) Instalare libraria SDL_bgi (url : https://sdl-bgi.sourceforge.io/#download)
 	-> descarcati ultima versiune a aceste librarii (in momentul actual, 3.0.0), cu extensia .tar.gz
 	-> Mergeti in folder-ul unde ati descarcat fisierul-suport (de regula, recomand in folder-ul Descarcari/Downloads sa-l puneti), dezarhivati zip-ul cu "Archive Utility.app" (aplicatie preinstalata in mac)
 	-> Deschideti terminalul si tastati urmatoarele comenzi
-#	-> $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
-#	-> $ make
-#	-> $ mv SDL_bgi.h /opt/homebrew/Cellar/sdl2/
-#	-> $ mv graphics.h /opt/homebrew/include
-#	-> $ mv libSDL_bgi.so /opt/lib
+```
+         $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
+	 $ make
+	 $ mv SDL_bgi.h /opt/homebrew/Cellar/sdl2/
+	 $ mv graphics.h /opt/homebrew/include
+	 $ mv libSDL_bgi.so /opt/homebrew/lib
+```
 
-4) Adjustarea Xcode-ului pentru a putea rula libraria SDL_bgi:
+# 4) Adjustarea Xcode-ului pentru a putea rula libraria SDL_bgi:
 	-> Deschideti Xcode si selectati "Create New Project"
 	-> Alegeti "Comand Line Tool"
 	-> denumiti sugestiv proiectul
 	-> (in bara de sus unde apare numele aplicatiei, langa logo-ul Apple-ului):
-	# Selectati Product -> Scheme -> "Edit Scheme"
-	# Selectati Run -> Diagnostics; Deselectati Metal API Validation
-	# Selectati tot la Run, "Options" -> "Use costum working directory: "; Aici navigati la folder-ul proiectului unde gasiti "main.cpp"; Apoi dati "close" la scheme
-	# In tabul din stanga, unde se regaseste "main.cpp", selectati (nume_proiect_cum_l-ati_denumit_voi).xcodeproj (este cel mai de sus din acel tab)
-	# Selectati din Targets, textul care are in stanga sa o iconita cu un terminal
-	# Build Phases -> "Link Binary with Libraries"; Apasati pe butonul de add "+" : "Add Other" -> "Add files..."
-	# Apasati comanda "Command + Shift + G" si introduceti "opt/homebrew/Cellar/sdl2/2.28.5/lib"
-	# Selectati urmatorul executabil : libSDL2-2.0.0.dylib
-	# In aceeasi maniera, adaugati si "libSDL_bgi.so" in "Link Binary with Libraries"; Acesta se gasesti in "/opt/homebrew/lib" (adresa pe care o introduceti dupa ce tastati comanda "Command + Shift + G")
-	# Mergeti la "General", sub "Frameworks and Libraries", selectati ambele executabile sa fie "Embed & Sign"
-	# Build Settings -> Architectures -> "Build Active Architecture Only" -> release; Selectati "Yes"
-	# Build Settings -> "Search Path" -> "Header Search Paths"; Inserati: ``/opt/homebrew/include`` 
-	# Build Settings -> "Search Path" -> "Library Search Paths"; Inserati: ``/opt/homebrew/Cellar/sdl2/2.28.5/lib`` 
-	#																						(Ambele fara ghilimele)
+	   Selectati Product -> Scheme -> "Edit Scheme"
+	   Selectati Run -> Diagnostics; Deselectati Metal API Validation
+	   Selectati tot la Run, "Options" -> "Use costum working directory: "; Aici navigati la folder-ul proiectului unde gasiti "main.cpp"; Apoi dati "close" la scheme
+	  In tabul din stanga, unde se regaseste "main.cpp", selectati (nume_proiect_cum_l-ati_denumit_voi).xcodeproj (este cel mai de sus din acel tab)
+	  Selectati din Targets, textul care are in stanga sa o iconita cu un terminal
+	  Build Phases -> "Link Binary with Libraries"; Apasati pe butonul de add "+" : "Add Other" -> "Add files..."
+	  Apasati comanda "Command + Shift + G" si introduceti "opt/homebrew/Cellar/sdl2/2.28.5/lib"
+	  Selectati urmatorul executabil : libSDL2-2.0.0.dylib
+	  In aceeasi maniera, adaugati si "libSDL_bgi.so" in "Link Binary with Libraries"; Acesta se gasesti in "/opt/homebrew/lib" (adresa pe care o introduceti dupa ce tastati comanda "Command + Shift + G")
+	  Mergeti la "General", sub "Frameworks and Libraries", selectati ambele executabile sa fie "Embed & Sign"
+	  Build Settings -> Architectures -> "Build Active Architecture Only" -> release; Selectati "Yes"
+	  Build Settings -> "Search Path" -> "Header Search Paths"; Inserati: ``/opt/homebrew/include`` 
+	  Build Settings -> "Search Path" -> "Library Search Paths"; Inserati: ``/opt/homebrew/Cellar/sdl2/2.28.5/lib`` 																				(Ambele fara ghilimele)
 
 
 
 
-# Sample Code: 
+# Sample Code (pentru verificare): 
 ```
 #include <SDL2/SDL_bgi.h>
 #include <graphics.h>
