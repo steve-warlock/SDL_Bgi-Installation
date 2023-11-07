@@ -8,7 +8,7 @@
 	-> Asteptati pana la finalizarea instalarii
 
 # 2) Instalare SDL2
-	-> scrieti in terminal ``brew install sdl2``
+	-> scrieti in terminal:  brew install sdl2
 	-> Aceasta "comanda" se va instala in folder-ul /usr/local/Cellar/
 
 3) Instalare libraria SDL_bgi (url : https://sdl-bgi.sourceforge.io/#download)
@@ -51,7 +51,7 @@
 	-> Asteptati pana la finalizarea instalarii
 
 # 2) Instalare SDL2
-	-> scrieti in terminal ``brew install sdl2``
+	-> scrieti in terminal: brew install sdl2
 	-> Aceasta "comanda" se va instala in folder-ul /opt/homebrew/Cellar
 
 # 3) Instalare libraria SDL_bgi (url : https://sdl-bgi.sourceforge.io/#download)
