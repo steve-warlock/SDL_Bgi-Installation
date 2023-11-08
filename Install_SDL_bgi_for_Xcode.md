@@ -5,6 +5,7 @@
 	-> copiati comanda din casuta de sub ```Install Homebrew```
 	-> introduceti comanda intr-o fereastra de terminal
 	-> La un moment dat, o sa vi se ceara parola de la computer; Introduceti parola in prompt
+ 	
 	-> Asteptati pana la finalizarea instalarii
 
 # 2) Instalare SDL2
@@ -35,11 +36,11 @@
 	 Build Phases -> "Link Binary with Libraries"; Apasati pe butonul de add "+" : "Add Other" -> "Add files..."
 	 Apasati comanda "Command + Shift + G" si introduceti "/usr/local/Cellar/sdl2/2.28.5/lib"
 	 Selectati urmatorul executabil : libSDL2-2.0.0.dylib
-	 In aceeasi maniera, adaugati si "libSDL_bgi.so" in "Link Binary with Libraries"; Acesta se gasesti in "/usr/local/lib" (adresa pe care o introduceti dupa ce tastati comanda "Command + Shift + G")
+	 In aceeasi maniera, adaugati si "libSDL_bgi.so" in "Link Binary with Libraries"; Acesta il gasesti in "/usr/local/lib" (adresa pe care o introduceti dupa ce tastati comanda "Command + Shift + G")
 	 Mergeti la "General", sub "Frameworks and Libraries", selectati ambele executabile sa fie "Embed & Sign"
 	 Build Settings -> Architectures -> "Build Active Architecture Only" -> release; Selectati "Yes"
 	 Build Settings -> "Search Path" -> "Header Search Paths"; Inserati: ``/usr/local/include`` 
-	 								  -> "Library Search Paths"; Inserati: ``/usr/local/Cellar/sdl2/2.28.5/lib`` 
+	 Build Settings -> "Search Path" -> "Library Search Paths"; Inserati: ``/usr/local/Cellar/sdl2/2.28.5/lib`` 
 																							(Ambele fara ghilimele)
 
 # II) Metoda pentru laptop-urile Macbook cu procesor de tip arm (M1, M2), MacOS Ventura sau mai noua:
@@ -48,6 +49,7 @@
 	-> copiati comanda din casuta de sub ```Install Homebrew```
 	-> introduceti comanda intr-o fereastra de terminal
 	-> La un moment dat, o sa vi se ceara parola de la computer; Introduceti parola in prompt
+        -> Faceti modificarile de la "next steps" ca sa mearga comanda brew!!!
 	-> Asteptati pana la finalizarea instalarii
 
 # 2) Instalare SDL2
@@ -60,7 +62,9 @@
 	-> Deschideti terminalul si tastati urmatoarele comenzi
 ```
          $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
-	 $ make
+	 # Inlocuiti Makefile-ul din acest folder cu cel de pe aceasta pagina
+	 $ rm Makefile
+	 $ 
 	 $ mv SDL_bgi.h /opt/homebrew/Cellar/sdl2/
 	 $ mv graphics.h /opt/homebrew/include
 	 $ mv libSDL_bgi.so /opt/homebrew/lib
