@@ -14,7 +14,7 @@
 
 3) Instalare libraria SDL_bgi (url : https://sdl-bgi.sourceforge.io/#download)
 	-> descarcati ultima versiune a aceste librarii (in momentul actual, 3.0.0), cu extensia .tar.gz
-	-> Mergeti in folder-ul unde ati descarcat fisierul-suport (de regula, recomand in folder-ul Descarcari/Downloads sa-l puneti), dezarhivati zip-ul cu "Archive Utility.app" (aplicatie preinstalata in mac)
+	-> Mergeti in folder-ul unde ati descarcat fisierul-suport (de regula, recomand in folder-ul Downloads sa-l puneti), dezarhivati zip-ul cu "Archive Utility.app" (aplicatie preinstalata in mac)
 	-> Deschideti terminalul si tastati urmatoarele comenzi:
 ```
 	 $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
@@ -27,9 +27,10 @@
 	-> Deschideti Xcode si selectati "Create New Project"
 	-> Alegeti "Comand Line Tool"
 	-> denumiti sugestiv proiectul
+ 	-> Alegeti limbajul C++
 	-> (in bara de sus unde apare numele aplicatiei, langa logo-ul Apple-ului):
 	 Selectati Product -> Scheme -> "Edit Scheme"
-	 Selectati Run -> Diagnostics; Deselectati Metal API Validation
+	 Selectati Run -> Diagnostics; Deselectati "Metal API Validation"
 	 Selectati tot la Run, "Options" -> "Use costum working directory: "; Aici navigati la folder-ul unde gasiti "main.cpp"; Apoi dati "close" la scheme
 	 In tabul din stanga, unde se regaseste "main.cpp", selectati (nume_proiect_cum_l-ati_denumit_voi).xcodeproj (este cel mai de sus din acel tab)
 	 Selectati din Targets, textul care are in stanga sa o iconita cu un terminal
@@ -64,7 +65,10 @@
          $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
 	 # Inlocuiti Makefile-ul din acest folder cu cel de pe aceasta pagina
 	 $ rm Makefile
-	 $ 
+	 # Descarcati noul Makefile (aici sunt doua metode):
+	 1) $ wget https://github.com/steve-warlock/SDL_Bgi-Installation/blob/main/Makefile
+	 2) curl -O https://github.com/steve-warlock/SDL_Bgi-Installation/blob/main/Makefile (in cazul in care nu va merge wget)
+	 $ make
 	 $ mv SDL_bgi.h /opt/homebrew/Cellar/sdl2/
 	 $ mv graphics.h /opt/homebrew/include
 	 $ mv libSDL_bgi.so /opt/homebrew/lib
@@ -74,6 +78,7 @@
 	-> Deschideti Xcode si selectati "Create New Project"
 	-> Alegeti "Comand Line Tool"
 	-> denumiti sugestiv proiectul
+ 	-> Alegeti limvajul C++
 	-> (in bara de sus unde apare numele aplicatiei, langa logo-ul Apple-ului):
 	   Selectati Product -> Scheme -> "Edit Scheme"
 	   Selectati Run -> Diagnostics; Deselectati Metal API Validation
