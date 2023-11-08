@@ -70,7 +70,7 @@
 	 $ rm Makefile
 	 # Descarcati noul Makefile (aici sunt doua metode):
 	 1) $ wget https://raw.githubusercontent.com/steve-warlock/SDL_Bgi-Installation/main/Makefile
-	 2) curl -O https://raw.githubusercontent.com/steve-warlock/SDL_Bgi-Installation/main/Makefile (in cazul in care nu va merge wget)
+	 2) $ curl -O https://raw.githubusercontent.com/steve-warlock/SDL_Bgi-Installation/main/Makefile (in cazul in care nu va merge wget)
 	 $ make
 	 $ mv SDL_bgi.h /opt/homebrew/Cellar/sdl2/
 	 $ mv graphics.h /opt/homebrew/include
