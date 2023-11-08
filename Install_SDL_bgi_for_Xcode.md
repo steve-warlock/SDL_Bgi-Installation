@@ -15,7 +15,7 @@
 # 3) Instalare libraria SDL_bgi (url : https://sdl-bgi.sourceforge.io/#download)
 	-> descarcati ultima versiune a aceste librarii (in momentul actual, 3.0.0), cu extensia .tar.gz
 	-> Mergeti in folder-ul unde ati descarcat fisierul-suport (de regula, recomand in folder-ul Downloads sa-l puneti), dezarhivati zip-ul cu "Archive Utility.app" (aplicatie preinstalata in mac)
-	-> Deschideti terminalul si tastati urmatoarele comenzi:
+	-> Deschideti terminalul si tastati urmatoarele comenzi (se omite dollar_sign ($)):
 ```
 	 $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
 	 $ make
@@ -63,7 +63,7 @@
 # 3) Instalare libraria SDL_bgi (url : https://sdl-bgi.sourceforge.io/#download)
 	-> descarcati ultima versiune a aceste librarii (in momentul actual, 3.0.0), cu extensia .tar.gz
 	-> Mergeti in folder-ul unde ati descarcat fisierul-suport (de regula, recomand in folder-ul Descarcari/Downloads sa-l puneti), dezarhivati zip-ul cu "Archive Utility.app" (aplicatie preinstalata in mac)
-	-> Deschideti terminalul si tastati urmatoarele comenzi
+	-> Deschideti terminalul si tastati urmatoarele comenzi (se omite dollar_sign ($)):
 ```
          $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
 	 # Inlocuiti Makefile-ul din acest folder cu cel de pe aceasta pagina
