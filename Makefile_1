@@ -3,21 +3,14 @@
 
 # Compiler and compiler flags
 CC = clang
-CFLAGS = -O2 -std=c11 -Wall -Wextra -fPIC -I/opt/homebrew/include/SDL2
+CFLAGS = -O2 -std=c11 -Wall -Wextra -fPIC -I /opt/homebrew/include/SDL2
 
 # Linker flags
-LDFLAGS = -shared -L/opt/homebrew/lib -lSDL2
+LDFLAGS = -shared -L /opt/homebrew/lib -lSDL2
 
 # Source file and output library name
 SRC = SDL_bgi.c
 LIB = libSDL_bgi.so
-
-# Header file
-HEADER = SDL_bgi.h
-
-# Installation directories
-LIB_DIR = /opt/homebrew/lib
-INC_DIR = /opt/homebrew/include
 
 # Default target (all)
 all: $(LIB)
@@ -26,14 +19,9 @@ all: $(LIB)
 $(LIB): $(SRC)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $(LIB) $(SRC)
 
-# Copy the library and header files to installation directories
-install: $(LIB) $(HEADER)
-	/usr/bin/install -m 755 $(LIB) $(LIB_DIR) ; \
-	/usr/bin/install -m 644 $(HEADER) $(INC_DIR)
-
 # Clean up the generated library
 clean:
 	rm -f $(LIB)
 
 # PHONY targets (targets that don't represent files)
-.PHONY: all install clean
+.PHONY: all clean
