@@ -93,7 +93,7 @@
 	  In tabul din stanga, unde se regaseste "main.cpp", selectati (nume_proiect_cum_l-ati_denumit_voi).xcodeproj (este cel mai de sus din acel tab)
 	  Selectati din Targets, textul care are in stanga sa o iconita cu un terminal
 	  Build Phases -> "Link Binary with Libraries"; Apasati pe butonul de add "+" : "Add Other" -> "Add files..."
-	  Apasati comanda "Command + Shift + G" si introduceti "opt/homebrew/Cellar/sdl2/2.28.5/lib"
+	  Apasati comanda "Command + Shift + G" si introduceti "/opt/homebrew/Cellar/sdl2/2.28.5/lib"
 	  Selectati urmatorul executabil : libSDL2-2.0.0.dylib
 	  In aceeasi maniera, adaugati si "libSDL_bgi.so" in "Link Binary with Libraries"; Acesta se gaseste in "/opt/homebrew/lib" (adresa pe care o introduceti dupa ce tastati comanda "Command + Shift + G")
 	  Mergeti la "General", sub "Frameworks and Libraries", selectati ambele executabile sa fie "Embed & Sign"
