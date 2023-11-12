@@ -67,11 +67,11 @@
 ```
          $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
 	 # Inlocuiti Makefile-ul din acest folder cu cel de pe aceasta pagina
+	 $ brew install pkg-config
 	 $ rm Makefile
 	 # Descarcati noul Makefile (aici sunt doua metode):
-	 1) $ wget https://raw.githubusercontent.com/steve-warlock/SDL_Bgi-Installation/main/Makefile_1
-	 2) $ curl -O https://raw.githubusercontent.com/steve-warlock/SDL_Bgi-Installation/main/Makefile_1 (in cazul in care nu va merge wget)
-		$ mv Makefile_1 Makefile
+	 1) $ wget https://raw.githubusercontent.com/steve-warlock/SDL_Bgi-Installation/main/Makefile
+	 2) $ curl -O https://raw.githubusercontent.com/steve-warlock/SDL_Bgi-Installation/main/Makefile (in cazul in care nu va merge wget)
 	 $ make
 	 $ mv SDL_bgi.h /opt/homebrew/Cellar/sdl2/
 	 $ mv graphics.h /opt/homebrew/include
