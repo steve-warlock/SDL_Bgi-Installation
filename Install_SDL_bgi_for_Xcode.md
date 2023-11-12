@@ -19,7 +19,7 @@
 ```
 	 $ cd ~/Downloads/(fisier_unde_ati_descarcat_libraria)/SDL_bgi-3.0.0/src
 	 $ make
-	 $ mv SDL_bgi.h /usr/local/Cellar/sdl2/
+	 $ mv SDL_bgi.h /usr/local/include/SDL2
 	 $ mv graphics.h /usr/local/include
 	 $ mv libSDL_bgi.so /usr/local/lib
 ```
@@ -73,7 +73,7 @@
 	 1) $ wget https://raw.githubusercontent.com/steve-warlock/SDL_Bgi-Installation/main/Makefile
 	 2) $ curl -O https://raw.githubusercontent.com/steve-warlock/SDL_Bgi-Installation/main/Makefile (in cazul in care nu va merge wget)
 	 $ make
-	 $ mv SDL_bgi.h /opt/homebrew/Cellar/sdl2/
+	 $ mv SDL_bgi.h /opt/homebrew/include/SDL2
 	 $ mv graphics.h /opt/homebrew/include
 	 $ mv libSDL_bgi.so /opt/homebrew/lib
 ```
