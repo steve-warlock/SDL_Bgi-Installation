@@ -44,8 +44,7 @@
 	 Mergeti la "General", sub "Frameworks and Libraries", selectati ambele executabile sa fie "Embed & Sign"
 	 Build Settings -> Architectures -> "Build Active Architecture Only" -> release; Selectati "Yes"
 	 Build Settings -> "Search Path" -> "Header Search Paths"; Inserati: ``/usr/local/include`` 
-	 Build Settings -> "Search Path" -> "Library Search Paths"; Inserati: ``/usr/local/Cellar/sdl2/2.28.5/lib`` 
-																							(Ambele fara ghilimele)
+																				                                                  			(fara ghilimele)
 
 # II) Metoda pentru laptop-urile Macbook cu procesor de tip arm (M1, M2), MacOS Ventura sau mai noua:
 
@@ -98,8 +97,7 @@
 	  In aceeasi maniera, adaugati si "libSDL_bgi.so" in "Link Binary with Libraries"; Acesta se gaseste in "/opt/homebrew/lib" (adresa pe care o introduceti dupa ce tastati comanda "Command + Shift + G")
 	  Mergeti la "General", sub "Frameworks and Libraries", selectati ambele executabile sa fie "Embed & Sign"
 	  Build Settings -> Architectures -> "Build Active Architecture Only" -> release; Selectati "Yes"
-	  Build Settings -> "Search Path" -> "Header Search Paths"; Inserati: ``/opt/homebrew/include`` 
-	  Build Settings -> "Search Path" -> "Library Search Paths"; Inserati: ``/opt/homebrew/Cellar/sdl2/2.28.5/lib`` 																				(Ambele fara ghilimele)
+	  Build Settings -> "Search Path" -> "Header Search Paths"; Inserati: ``/opt/homebrew/include`` 			(fara ghilimele)
 
 
 
